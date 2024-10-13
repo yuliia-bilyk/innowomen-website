@@ -52,7 +52,7 @@ body {
 }
 
 .navigation ul li a {
-    color: #FC76F8; /* Purple text color */
+    color: #D599FB; /* Purple text color */
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
@@ -63,7 +63,7 @@ body {
 .navigation ul li a:hover,
 .navigation ul li a.active {
     color: #fff; /* White text on hover and active */
-    background-color: #FC76F8; /* Purple background on hover and active */
+    background-color: #D599FB; /* Purple background on hover and active */
     border-radius: 5px;
 }
 
@@ -116,7 +116,7 @@ body {
 
 /* Header */
 header {
-    background-color: #FC76F8;
+    background-color: #D599FB;
     color: white;
     text-align: center;
     padding: 100px 20px 40px;
@@ -179,7 +179,7 @@ h1 {
 }
 
 .cta-button:hover {
-    background-color: #FC76F8;
+    background-color: #a236e5;
     color: #fff;
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
@@ -426,7 +426,7 @@ main {
     display: block;
     margin: 30px auto;
     padding: 15px 30px;
-    background-color: #FC76F8;
+    background-color: #D599FB;
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
@@ -441,6 +441,57 @@ main {
 .cta-button:hover {
     background-color: #FFD700; /* Gold color on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.image-gallery {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.image-gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 250px;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 100%;
+        max-width: none;
+    }
 }
 
 /* FAQ Section */
@@ -557,6 +608,156 @@ main {
     }
 }
 
+.subscribe-section {
+    padding: 60px 20px;
+    background: #333; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 20px; /* Smooth rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.subscribe-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subscribe-title {
+    font-size: 2.5em; /* Large font for the main question */
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    line-height: 1.2;
+}
+
+.subscribe-subtitle {
+    font-size: 2em; /* Large font for emphasis */
+    color: #00bfa5; /* Accent color for highlight */
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.subscribe-description {
+    font-size: 1.1em;
+    color: #ccc; /* Light grey for a softer call-to-action */
+    margin-bottom: 1.5em;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-section input[type="email"] {
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #333;
+}
+
+.subscribe-section button {
+    padding: 15px 30px;
+    font-size: 1em;
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribe-section button:hover {
+    background-color: #D599FB;
+    transform: translateY(-2px); /* Elevate on hover */
+}
+
+.subscription-message {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #00ff77; /* Green for success messages */
+}
+.contact-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #D599FB;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #c472dc
+}
+
+.book-call {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.book-call a {
+    color: #419c94;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.book-call a:hover {
+    text-decoration: underline;
+}
 /* Footer */
 footer {
     background-color: #333;
@@ -586,7 +787,7 @@ footer {
 }
 
 .footer-left .social-icon:hover {
-    color: #8CF8FC;
+    color: #D599FB;
     transform: scale(1.2); /* Add a scaling effect on hover */
 }
 
@@ -602,7 +803,7 @@ footer {
 
 .footer-left .contact-info a:hover {
     text-decoration: underline;
-    color: #00C4CC;
+    color: #D599FB;
 }
 
 .footer-center {
@@ -611,9 +812,9 @@ footer {
 }
 
 .footer-center .footer-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Make the image circular */
+    width: 150px;
+    height: 50px;
+    border-radius: 0%; /* Make the image circular */
     object-fit: cover; /* Ensure the image fits within the circle */
 }
 
@@ -622,23 +823,43 @@ footer {
 }
 
 .footer-right .partner-button {
-    background-color: #FFD700; 
-    color: #333; 
-    padding: 15px 25px;
+    padding: 15px 30px;
+    font-size: 1em;
+    background-color: #b970e7;
+    color: rgb(255, 255, 255);
+    border: none;
     border-radius: 30px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s; /* Add transitions for hover effect */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
     display: inline-block;
     text-align: center;
+    text-decoration: none;
 }
 
 .footer-right .partner-button:hover {
-    background-color: #00a2a6;
-    transform: scale(1.1); /* Add a scaling effect on hover */
+    background-color: #ae47cd;
+    transform: translateY(-2px); /* Elevate on hover */
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
+}
+.button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4db6ac; /* Calm teal color */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #419c94; /* Darker teal on hover */
+    transform: translateY(-2px);
 }
