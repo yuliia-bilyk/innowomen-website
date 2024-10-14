@@ -617,6 +617,7 @@ main {
     margin: 40px auto;
     border-radius: 20px; /* Smooth rounded corners */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure content does not overflow */
 }
 
 .subscribe-content {
@@ -646,9 +647,10 @@ main {
 
 .subscribe-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
     gap: 10px;
+    margin-top: 20px;
+    align-items: center; /* Center align the items */
 }
 
 .subscribe-section input[type="email"] {
@@ -656,11 +658,12 @@ main {
     font-size: 1em;
     border: none;
     border-radius: 30px;
-    flex: 1;
-    max-width: 300px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     color: #333;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 90%; /* Adjusted width on mobile */
+    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .subscribe-section button {
@@ -672,6 +675,8 @@ main {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 80%; /* Button width on mobile for comparison */
 }
 
 .subscribe-section button:hover {
@@ -683,6 +688,22 @@ main {
     margin-top: 20px;
     font-size: 1em;
     color: #00ff77; /* Green for success messages */
+}
+
+/* Responsive Design Adjustments */
+@media (min-width: 768px) {
+    .subscribe-form {
+        flex-direction: row; /* Align elements side by side on larger screens */
+    }
+
+    .subscribe-section input[type="email"] {
+        max-width: 500px; /* Wider input on desktop */
+    }
+
+    .subscribe-section button {
+        width: auto; /* Reset button width on larger screens */
+        max-width: 300px; /* Adjust button width on desktop */
+    }
 }
 .contact-section {
     padding: 60px 20px;
